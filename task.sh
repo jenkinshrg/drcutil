@@ -54,6 +54,7 @@ rm -f *.tau
 rm -f *.qRef
 rm -f *.log
 rm -f /tmp/emg-hmc_*.log /tmp/motion-command-solver_*.log /tmp/walking-command-solver_*.log
+./clear-omninames.sh
 
 if type savedbg-hrp > /dev/null 2>&1
 then
