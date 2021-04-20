@@ -6,7 +6,7 @@ export SUDO=
 export MAKE_THREADS_NUMBER=4
 export BUILD_TYPE=RelWithDebInfo
 export ROBOT_HOSTNAME=hrp5p01c.local
-export PACKAGES="OpenRTM-aist openhrp3 hrpsys-base HRP5P hmc2 hrpsys-humanoid"
+export PACKAGES="OpenRTM-aist openhrp3 hrpsys-base HRP5P sch-core hmc2 hrpsys-humanoid"
 
 ######## Please don't edit from here ########
 source definitions.sh
