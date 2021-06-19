@@ -17,13 +17,14 @@ getSHA() {
     dir_name=$1
     if [ -e $dir_name ]; then
         cd "$dir_name/"
-	echo -n "$dir_name ... " | tee -a $SRC_DIR/headSHA.log
-	sha=$(git show -s --format=%H)
-	 
-	echo -n "$sha" | tee -a $SRC_DIR/headSHA.log
-	
-	if [[ $(git diff --stat) != '' ]]; then
-          echo -n ' ... dirty' | tee -a $SRC_DIR/headSHA.log
+        echo -n "$dir_name  ...  " | tee -a $SRC_DIR/headSHA.log
+        sha=$(git show -s --format=%H)
+        branch=$(git branch | grep \* | cut -d ' ' -f2)
+         
+        echo -n "$branch  ...  $sha" | tee -a $SRC_DIR/headSHA.log
+        
+        if [[ $(git diff --stat) != '' ]]; then
+          echo -n '  ... dirty' | tee -a $SRC_DIR/headSHA.log
         fi
         #insert new line
         echo  | tee -a $SRC_DIR/headSHA.log 
