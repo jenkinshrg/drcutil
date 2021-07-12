@@ -7,7 +7,6 @@ export MAKE_THREADS_NUMBER=8
 export BUILD_TYPE=RelWithDebInfo
 export INTERNAL_MACHINE=1
 export ROBOT_IOB_VERSION=2
-export PACKAGES="OpenRTM-aist openhrp3 hrpsys-base HRP4CR"
-
+export PACKAGES="OpenRTM-aist openhrp3 hrpsys-base HRP4CR sch-core state-observation hmc2 hrpsys-humanoid hrpsys-private hrpsys-state-observation savedbg"
 ######## Please don't edit from here ########
 source definitions.sh
